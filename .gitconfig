@@ -1,0 +1,13 @@
+[user]
+	email = dawidowoc6@gmail.com
+	name = Dawid Owoc
+
+[alias]
+	s = status
+	c = commit
+	st = stash
+	a = add
+	d = diff
+	r = rebase
+	p = push
+	co = checkout
