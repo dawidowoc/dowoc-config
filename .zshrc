@@ -100,6 +100,12 @@ source $ZSH/oh-my-zsh.sh
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
+IDEA_PATH=/opt/idea-IU-233.13135.103
+
+function idea() {
+    "$IDEA_PATH/bin/idea.sh" > /dev/null 2>&1 &
+}
+
 alias ls="ls -alhG"
 alias g="git"
 alias gco="git checkout"
