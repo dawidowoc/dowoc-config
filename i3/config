@@ -194,7 +194,7 @@ bar {
 }
 
 # Terminal in scratchpad
-exec --no-startup-id "konsole"
+exec --no-startup-id "konsole -e tmux"
 for_window [class="konsole"] move scratchpad, move position 0 0, resize set 1366 768;
 bindsym F11 [class="konsole"] scratchpad show;
 
