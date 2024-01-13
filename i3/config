@@ -183,11 +183,18 @@ mode "resize" {
 
 bindsym $mod+r mode "resize"
 
-# Variables
+# Clients
 set $START_IDE "/opt/idea-IU-233.13135.103/bin/idea.sh > /dev/null 2>&1 &"
 set $START_BROWSER brave
+set $START_SECOND_BROWSER firefox
 set $START_PASSWORD_MANAGER keepassxc
+set $START_MAIL_CLIENT "thunderbird > /dev/null 2>&1 &"
+
+set $IDE_CLASS_MATCHER "jetbrains-idea"
+set $BROWSER_CLASS_MATCHER "Brave-browser"
+set $SECOND_BROWSER_CLASS_MATCHER firefox
 set $PASSWORD_MANAGER_INSTANCE_MATCHER keepassxc
+set $MAIL_CLIENT_CLASS_MATCHER thunderbird
 
 # Start i3bar to display a workspace bar (plus the system information i3status
 # finds out, if available)
@@ -205,6 +212,14 @@ exec --no-startup-id $START_PASSWORD_MANAGER
 for_window [instance="$PASSWORD_MANAGER_INSTANCE_MATCHER"] move scratchpad, move position 0 0, resize set 1366 768;
 bindsym F10 [instance="$PASSWORD_MANAGER_INSTANCE_MATCHER"] scratchpad show;
 
-# Setup workspace 1 (IDE + browser)
+# Setup workspace 1 - work (IDE + browser)
 exec $START_IDE
+assign [class=$IDE_CLASS_MATCHER] 1
 exec $START_BROWSER
+assign [class=$BROWSER_CLASS_MATCHER] 1
+
+# Setup workspace 2 - communication & planning (browser + mail)
+exec $START_MAIL_CLIENT
+assign [class=$MAIL_CLIENT_CLASS_MATCHER] 2
+exec $START_SECOND_BROWSER
+assign [class=$SECOND_BROWSER_CLASS_MATCHER] 2
