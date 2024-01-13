@@ -183,6 +183,9 @@ mode "resize" {
 
 bindsym $mod+r mode "resize"
 
+# Lock screen
+bindsym $mod+Control+l exec i3lock
+
 # Clients
 set $START_IDE "/opt/idea-IU-233.13135.103/bin/idea.sh > /dev/null 2>&1 &"
 set $START_BROWSER brave
