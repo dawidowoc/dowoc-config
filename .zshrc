@@ -103,7 +103,7 @@ source $ZSH/oh-my-zsh.sh
 IDEA_PATH=/opt/idea-IU-233.13135.103
 
 function idea() {
-    "$IDEA_PATH/bin/idea.sh" > /dev/null 2>&1 &
+    "$IDEA_PATH/bin/idea.sh" $1 > /dev/null 2>&1 &
 }
 
 alias ls="ls -alhG"
