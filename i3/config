@@ -187,6 +187,7 @@ bindsym $mod+r mode "resize"
 bindsym $mod+Control+l exec i3lock
 
 # Clients
+set $START_TERMINAL "konsole -e tmux"
 set $START_IDE "/opt/idea-IU-233.13135.103/bin/idea.sh > /dev/null 2>&1 &"
 set $START_BROWSER "firefox -P dowoc-profile"
 set $START_SECOND_BROWSER firefox
@@ -194,6 +195,7 @@ set $START_PASSWORD_MANAGER keepassxc
 set $START_MAIL_CLIENT "thunderbird > /dev/null 2>&1 &"
 set $START_MUSIC_PLAYER "psst-gui > /dev/null 2>&1 &"
 
+set $TERMINAL_CLASS_MATCHER "konsole"
 set $IDE_CLASS_MATCHER "jetbrains-idea"
 set $BROWSER_CLASS_MATCHER "Brave-browser"
 set $SECOND_BROWSER_CLASS_MATCHER firefox
@@ -214,9 +216,9 @@ bar {
 }
 
 # Terminal in scratchpad
-exec --no-startup-id "konsole -e tmux"
-for_window [class="konsole"] move scratchpad, move position $SCRATCHPAD_X_POS $SCRATCHPAD_Y_POS, resize set $SCRATCHPAD_WIDTH $SCRATCHPAD_HEIGHT;
-bindsym F11 [class="konsole"] scratchpad show;
+exec --no-startup-id $START_TERMINAL
+for_window [class=$TERMINAL_CLASS_MATCHER] move scratchpad, move position $SCRATCHPAD_X_POS $SCRATCHPAD_Y_POS, resize set $SCRATCHPAD_WIDTH $SCRATCHPAD_HEIGHT;
+bindsym F11 [class=$TERMINAL_CLASS_MATCHER] scratchpad show;
 
 # Password manager in scratchpad
 exec --no-startup-id $START_PASSWORD_MANAGER
