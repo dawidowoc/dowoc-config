@@ -100,6 +100,8 @@ source $ZSH/oh-my-zsh.sh
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
+export PATH="$PATH:$(yarn global bin)"
+
 IDEA_PATH=/opt/idea-IU-233.13135.103
 
 function idea() {
