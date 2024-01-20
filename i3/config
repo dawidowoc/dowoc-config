@@ -226,7 +226,7 @@ bindsym F10 [instance="$PASSWORD_MANAGER_INSTANCE_MATCHER"] scratchpad show;
 # Music player in scratchpad
 exec --no-startup-id $START_MUSIC_PLAYER
 for_window [class="$MUSIC_PLAYER_CLASS_MATCHER"] move scratchpad, move position $SCRATCHPAD_X_POS $SCRATCHPAD_Y_POS, resize set $SCRATCHPAD_WIDTH $SCRATCHPAD_HEIGHT;
-bindsym F9 [class="$MUSIC_PLAYER_CLASS_MATCHER"] scratchpad show;
+bindsym $mod+F10 [class="$MUSIC_PLAYER_CLASS_MATCHER"] scratchpad show;
 
 # Setup workspace 1 - work (IDE + browser)
 exec $START_IDE
