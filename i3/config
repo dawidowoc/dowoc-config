@@ -188,7 +188,7 @@ bindsym $mod+Control+l exec i3lock
 
 # Clients
 set $START_IDE "/opt/idea-IU-233.13135.103/bin/idea.sh > /dev/null 2>&1 &"
-set $START_BROWSER brave
+set $START_BROWSER "firefox -P dowoc-profile"
 set $START_SECOND_BROWSER firefox
 set $START_PASSWORD_MANAGER keepassxc
 set $START_MAIL_CLIENT "thunderbird > /dev/null 2>&1 &"
@@ -228,8 +228,6 @@ assign [class=$IDE_CLASS_MATCHER] 1
 exec $START_BROWSER
 assign [class=$BROWSER_CLASS_MATCHER] 1
 
-# Setup workspace 2 - communication & planning (browser + mail)
+# Setup workspace 2 - communication (mail)
 exec $START_MAIL_CLIENT
 assign [class=$MAIL_CLIENT_CLASS_MATCHER] 2
-exec $START_SECOND_BROWSER
-assign [class=$SECOND_BROWSER_CLASS_MATCHER] 2
