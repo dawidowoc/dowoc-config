@@ -191,3 +191,8 @@ alt-shift-j = ['join-with down', 'mode main']
 alt-shift-k = ['join-with up', 'mode main']
 alt-shift-l = ['join-with right', 'mode main']
 esc = 'mode main'
+
+# Floating terminal
+[[on-window-detected]]
+if.app-id = 'com.googlecode.iterm2'
+run = ['layout floating']
