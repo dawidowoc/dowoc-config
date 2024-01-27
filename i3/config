@@ -194,6 +194,7 @@ set $START_SECOND_BROWSER firefox
 set $START_PASSWORD_MANAGER keepassxc
 set $START_MAIL_CLIENT "thunderbird > /dev/null 2>&1 &"
 set $START_MUSIC_PLAYER "psst-gui > /dev/null 2>&1 &"
+set $START_NOTES_APP subl
 
 set $TERMINAL_CLASS_MATCHER "konsole"
 set $IDE_CLASS_MATCHER "jetbrains-idea"
@@ -202,6 +203,7 @@ set $SECOND_BROWSER_CLASS_MATCHER firefox
 set $PASSWORD_MANAGER_INSTANCE_MATCHER keepassxc
 set $MAIL_CLIENT_CLASS_MATCHER thunderbird
 set $MUSIC_PLAYER_CLASS_MATCHER Psst-gui
+set $NOTES_APP_CLASS_MATCHER Subl
 
 # Config vars
 set $SCRATCHPAD_X_POS 820
@@ -219,6 +221,11 @@ bar {
 exec --no-startup-id $START_TERMINAL
 for_window [class=$TERMINAL_CLASS_MATCHER] move scratchpad, move position $SCRATCHPAD_X_POS $SCRATCHPAD_Y_POS, resize set $SCRATCHPAD_WIDTH $SCRATCHPAD_HEIGHT;
 bindsym F11 [class=$TERMINAL_CLASS_MATCHER] scratchpad show;
+
+# Notes app in scratchpad
+exec --no-startup-id $START_NOTES_APP
+for_window [class="$NOTES_APP_CLASS_MATCHER"] move scratchpad, move position $SCRATCHPAD_X_POS $SCRATCHPAD_Y_POS, resize set $SCRATCHPAD_WIDTH $SCRATCHPAD_HEIGHT;
+bindsym $mod+F11 [class="$NOTES_APP_CLASS_MATCHER"] scratchpad show;
 
 # Password manager in scratchpad
 exec --no-startup-id $START_PASSWORD_MANAGER
