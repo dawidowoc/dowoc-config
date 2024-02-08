@@ -43,6 +43,9 @@ alt-7 = 'workspace 7'
 alt-8 = 'workspace 8'
 alt-9 = 'workspace 9'
 alt-0 = 'workspace 10'
+alt-m = 'workspace M'
+alt-n = 'workspace N'
+alt-p = 'workspace P'
 
 alt-shift-1 = 'move-node-to-workspace 1'
 alt-shift-2 = 'move-node-to-workspace 2'
@@ -54,6 +57,9 @@ alt-shift-7 = 'move-node-to-workspace 7'
 alt-shift-8 = 'move-node-to-workspace 8'
 alt-shift-9 = 'move-node-to-workspace 9'
 alt-shift-0 = 'move-node-to-workspace 10'
+alt-shift-m = 'move-node-to-workspace M'
+alt-shift-n = 'move-node-to-workspace N'
+alt-shift-p = 'move-node-to-workspace P'
 
 alt-shift-c = 'reload-config'
 
@@ -71,3 +77,18 @@ esc = 'mode main'
 [[on-window-detected]]
 if.app-id = 'com.googlecode.iterm2'
 run = ['layout floating']
+
+# Notes app in worskpace N
+[[on-window-detected]]
+if.app-id = 'com.sublimetext.4'
+run = 'move-node-to-workspace N'
+
+# Music player in worskpace M
+[[on-window-detected]]
+if.app-id = 'com.spotify.client'
+run = 'move-node-to-workspace M'
+
+# Password manager in workspace P
+[[on-window-detected]]
+if.app-id = 'org.keepassxc.keepassxc'
+run = 'move-node-to-workspace P'
