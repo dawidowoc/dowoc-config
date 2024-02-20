@@ -189,7 +189,7 @@ bindsym $mod+Control+l exec i3lock
 # Clients
 set $START_TERMINAL "konsole -e tmux"
 set $START_IDE "/opt/idea-IU-233.13135.103/bin/idea.sh > /dev/null 2>&1 &"
-set $START_BROWSER "firefox -P dowoc-profile"
+set $START_BROWSER brave
 set $START_SECOND_BROWSER firefox
 set $START_PASSWORD_MANAGER keepassxc
 set $START_MAIL_CLIENT "thunderbird > /dev/null 2>&1 &"
