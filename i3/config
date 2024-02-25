@@ -194,7 +194,7 @@ set $START_SECOND_BROWSER firefox
 set $START_PASSWORD_MANAGER keepassxc
 set $START_MAIL_CLIENT "thunderbird > /dev/null 2>&1 &"
 set $START_MUSIC_PLAYER "psst-gui > /dev/null 2>&1 &"
-set $START_NOTES_APP subl
+set $START_NOTES_APP joplin
 
 set $TERMINAL_CLASS_MATCHER "konsole"
 set $IDE_CLASS_MATCHER "jetbrains-idea"
@@ -203,7 +203,7 @@ set $SECOND_BROWSER_CLASS_MATCHER firefox
 set $PASSWORD_MANAGER_INSTANCE_MATCHER keepassxc
 set $MAIL_CLIENT_CLASS_MATCHER thunderbird
 set $MUSIC_PLAYER_CLASS_MATCHER Psst-gui
-set $NOTES_APP_CLASS_MATCHER Subl
+set $NOTES_APP_CLASS_MATCHER Joplin
 
 # Config vars
 set $SCRATCHPAD_X_POS 820
