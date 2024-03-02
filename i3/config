@@ -186,6 +186,9 @@ bindsym $mod+r mode "resize"
 # Lock screen
 bindsym $mod+Control+l exec i3lock
 
+# Gaps
+gaps inner 30px
+
 # Wallpaper
 exec nitrogen --restore
 
