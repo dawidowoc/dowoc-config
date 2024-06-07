@@ -112,3 +112,5 @@ alias ls="ls -alhG"
 alias g="git"
 alias gco="git checkout"
 alias t="tig"
+
+alias mci="mvn clean install -DskipTests -Dmaven.test.skip=true"
