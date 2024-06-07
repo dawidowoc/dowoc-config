@@ -11,3 +11,5 @@
 	r = rebase
 	p = push
 	co = checkout
+[core]
+	editor = vim
