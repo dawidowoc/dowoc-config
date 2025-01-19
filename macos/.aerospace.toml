@@ -75,23 +75,3 @@ k = 'resize height -50'
 l = 'resize width +50'
 enter = 'mode main'
 esc = 'mode main'
-
-# Floating terminal
-[[on-window-detected]]
-if.app-id = 'com.googlecode.iterm2'
-run = ['layout floating']
-
-# Notes app in worskpace N
-[[on-window-detected]]
-if.app-id = 'com.sublimetext.4'
-run = 'move-node-to-workspace N'
-
-# Music player in worskpace M
-[[on-window-detected]]
-if.app-id = 'com.spotify.client'
-run = 'move-node-to-workspace M'
-
-# Password manager in workspace P
-[[on-window-detected]]
-if.app-id = 'org.keepassxc.keepassxc'
-run = 'move-node-to-workspace P'
