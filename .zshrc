@@ -114,3 +114,7 @@ alias gco="git checkout"
 alias t="tig"
 
 alias mci="mvn clean install -DskipTests -Dmaven.test.skip=true"
+
+# Commit Driven Development
+function aim() { vim ./COMMIT_MSG; }
+function fire() { vim ./COMMIT_MSG && ( git commit -F ./COMMIT_MSG $* ) && rm ./COMMIT_MSG; }
