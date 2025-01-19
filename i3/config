@@ -218,3 +218,6 @@ bindsym $mod+Shift+m move container to workspace music
 # Password manager workspace
 bindsym $mod+p workspace passwordManager
 bindsym $mod+Shift+p move container to workspace passwordManager
+
+# Run dropbox on login
+exec dropbox
