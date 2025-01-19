@@ -11,5 +11,6 @@
 	r = rebase
 	p = push
 	co = checkout
+	fup = "!f() { git commit --fixup=HEAD && git rebase --autosquash HEAD~2; }; f"
 [core]
 	editor = vim
