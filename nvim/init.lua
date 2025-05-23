@@ -1,3 +1,5 @@
+require('config')
+
 vim.keymap.set('n', '<C-e>', ':Explore<CR>', { noremap = true, silent=true })
 vim.cmd('syntax on')
 vim.opt.number = true
