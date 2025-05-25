@@ -1,0 +1,14 @@
+[Unit]
+Description=NordVPN service
+Wants=network-online.target
+After=network-online.target
+
+[Service]
+Type=oneshot
+ExecStart=/usr/bin/nordvpn connect
+ExecReload=/usr/bin/nordvpn connect
+ExecStop=/usr/bin/nordvpn disconnect
+RemainAfterExit=yes
+
+[Install]
+WantedBy=default.target
