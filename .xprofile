@@ -1,0 +1,13 @@
+xhost +SI:localuser:root
+
+# Remap ESC
+setxkbmap -option
+setxkbmap -option caps:escape
+
+# Set mouse speed
+DEVICE_NAME="Logitech ERGO M575"
+SPEED="3.0"
+
+DEVICE_ID=$(xinput list | grep 'Logitech ERGO M575' | grep -o 'id=[0-9]*' | cut -d= -f2)
+xinput --set-prop "$DEVICE_ID" "Coordinate Transformation Matrix" "$SPEED" 0.0 0.0 0.0 "$SPEED" 0.0 0.0 0.0 1
+
