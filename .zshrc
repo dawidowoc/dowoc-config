@@ -121,3 +121,5 @@ function fire() { vim ./COMMIT_MSG && ( git commit -F ./COMMIT_MSG $* ) && rm ./
 
 # fzf
 source <(fzf --zsh)
+
+export LANG="en_US.UTF-8"
